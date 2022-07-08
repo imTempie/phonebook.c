@@ -4,16 +4,18 @@
 
 typedef struct
 {
-    string name;
-    string number;
+    const char* name;
+    const char* number;
 }
 person;
 
 int main(void)
 {
     person people[2];
-    string toFind = get_string("Enter Name: ");
-
+    
+    const char* toFind;
+    scanf("%[^\n]%*c", toFind);
+    
     people[0].name = "Carter";
     people[0].number = "+1-617-495-1000";
 
