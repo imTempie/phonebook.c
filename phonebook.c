@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <cs50.h>
 #include <string.h>
 
 typedef struct
@@ -12,10 +11,11 @@ person;
 int main(void)
 {
     person people[2];
-    
-    const char* toFind;
-    scanf("%[^\n]%*c", toFind);
-    
+
+    char toFind[20];
+    printf("Name:  ");
+    scanf("%s", toFind);
+
     people[0].name = "Carter";
     people[0].number = "+1-617-495-1000";
 
